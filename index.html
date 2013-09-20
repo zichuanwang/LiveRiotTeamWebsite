@@ -4,13 +4,20 @@
     <title>USC 2013 Fall Software Engineering Team 04</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="website/bootstrap/css/bootstrap.min.css" media="screen" charset="utf-8">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="website/bootstrap/css/video-js.css" rel="stylesheet" type="text/css">
+    <!-- video.js must be in the <head> for older IEs to work. -->
+    <script src="website/bootstrap/js/video.js"></script>
 
-    <!-- costom -->
-    <link rel="stylesheet" href="bootstrap/css/costom.css"/>
+
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+        videojs.options.flash.swf = "video-js.swf";
+    </script>
   </head>
-  <body>
-    <div class="navbar navbar-default navbar-static-top">
+  <body style="padding-top: 70px">
+    <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <a href="#" class="navbar-brand">Team 04</a>
@@ -33,80 +40,123 @@
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="team.html">Team Members</a></li>
+            <li><a href="website/team.html">Team Members</a></li>
           </ul>
         </div>
       </div>
     </div>
 
     <div class="container">
-
       <div class="row">
         <div class="col-lg-12">
           <div class="page-header">
               <a href="http://www.liveriot.net">
-                <img src="images/badge.png">
+                <img src="website/images/badge.png">
               </a>
           </div>
           <p class="lead text-muted"><em>Empowering musicians and fans with techonology to create an interactive live music documentations</em></p>
         </div>
       </div>
-
-      <div class="row">
-          <div class="col-md-4 col-xs-6 col-sm-4">
-              <div class="thumbnail">
-                  <div class="caption" style="background-color: #f9f9f9; height: 270px">
-                      <p><iframe width="315" height="230" src="http://www.youtube.com/embed/wzwfnwlitKU" frameborder="0" allowfullscreen></iframe></p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 col-xs-6 col-sm-4">
-              <div class="thumbnail">
-                  <div class="caption" style="background-color: #f9f9f9; height: 270px">
-                      <h3>Project</h3>
-                      <p class="text-info">LiveRiot provides musicians and their fans an easy way to document live events and to curate these events/videos in an online community dedicated to their local music.</p>
-                      <p class="text-info">LiveRiot gives users the technology to share music like never before. With our audio syncing technology and powerful social media tools, we make it easy to share, browse, and discover live music.</p>
-                  </div>
-              </div>
-          </div>
-          <div class="col-md-4 col-xs-6 col-sm-4">
-              <div class="thumbnail">
-                  <div class="caption" style="background-color: #f9f9f9; height: 270px">
-                      <h3>Client</h3>
-                      <p>Name: Charles Zivko / Co-Founder</p>
-                      <p>Email: <a href="mailto:kurling@liveriot.net">Charles@LiveRiot.net</a></p>
-                      <p>Phone: (310) 902-1432</p>
-                      <p><br/></p>
-                      <p>Name: Kurling</p>
-                      <p>Email: <a href="mailto:kurling@liveriot.net">kurling@liveriot.net</a></p>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-
     </div>
+
 
     <div class="container">
-      <footer >
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="page-footer">
-              <ul class="list-unstyled">
-                <li><a href="https://github.com/zichuanwang/LiveRiotTeamWebsite/">GitHub</a></li>
-              </ul>
-              <p>Made by Zichuan Wang and Haoyu Huang. Powered by Bootstrap 3.</p>
-              <p>Copyright © 2013 USC Fall 2013 Course 577a-30128 Software Engineering Team 04</p>
-            </div>
-          </div>
-        </div>
-      </footer>
 
+        <div class="row">
+            <div class="col-md-1 col-lg-offset-1" style="height: 540px; padding-top: 20px">
+                <video id="liveRiotVideo" class="video-js vjs-default-skin" controls preload="none" width="900" height="500"
+                       poster="website/images/videoposter.png"
+                       data-setup="{}">
+                    <source src="videos/LiveRiot720.mp4" type='video/mp4' />
+                </video>
+            </div>
+        </div>
+
+
+        <div class="row" style="height: 200px">
+            <div class="col-xs-6 col-sm-4 col-md-4" style="height: 200px">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Project</h3>
+                        <p>Project Domain: Multimedia archive</p>
+                        <br/>
+                        <p>Project Type: </p>
+                        <p>&nbsp;&nbsp; - <em>Database, iOS, digital signal processing, web based</em></p>
+                        <br/>
+                        <p>COTS: </p>
+                        <p>&nbsp;&nbsp; - <em>Amazon EC2, Heroku, PostgreSQL</em></p>
+                        <br/>
+                        <br/>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-4" style="height: 200px">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Developer Team</h3>
+                        <p>Yang Li</p>
+                        <p>&nbsp;&nbsp;- <em>Project Manager,Life Cycle Planner</em></p>
+                        <p>Haishan Ye</p>
+                        <p>&nbsp;&nbsp;  - <em>Requirement Engineer, Life Cycle Planner</em></p>
+                        <p>Haoyu Huang</p>
+                        <p>&nbsp;&nbsp;  - <em>Feasibility Engineer, System Architect</em></p>
+                        <p>Ye Tian </p>
+                        <p>&nbsp;&nbsp; - <em>Operational Concept Engineer, Prototyper</em></p>
+                        <p>Zichuan Wang </p>
+                        <p>&nbsp;&nbsp;- <em>Operational Concept Engineer, Prototyper</em></p>
+                        <p>Kaiqi Zhang</p>
+                        <p>&nbsp;&nbsp;  - <em>Feasibility Engineer, System Architect</em></p>
+                        <p>Alok Mitra - <em>IIV&V</em></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-4" style="height: 200px">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3>Customer</h3>
+                        <p>Name: Charles Zivko</p>
+                        <p>Email <a href="mailto:Charles@LiveRiot.net">Charles@LiveRiot.net</a></p>
+                        <p>Phone: (310) 902-1432</p>
+                        <br/>
+                        <br/>
+                        <p>Name: Kurling</p>
+                        <p>Email: <a href="mailto:kurling@liveriot.net">kurling@liveriot.net</a></p>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row" style="padding-top: 320px">
+                <div class="col-lg-12">
+                    <div class="page-footer">
+                        <ul class="list-unstyled">
+                            <li><a href="https://github.com/zichuanwang/LiveRiotTeamWebsite/">GitHub</a></li>
+                        </ul>
+                        <p>Made by Zichuan Wang and Haoyu Huang. Powered by Bootstrap 3.</p>
+                        <p>Copyright &copy; 2013 USC Fall 2013 Course 577a-30128 Software Engineering Team 04</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="//code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="website/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
