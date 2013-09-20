@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="website/bootstrap/css/bootstrap.min.css" media="screen">
-    <!-- Chang URLs to wherever Video.js files will be hosted -->
-    <link href="website/bootstrap/css/video-js.css" rel="stylesheet" type="text/css">
-    <!-- video.js must be in the <head> for older IEs to work. -->
-    <script src="website/bootstrap/js/video.js"></script>
-
-
-    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
-    <script>
-        videojs.options.flash.swf = "video-js.swf";
-    </script>
   </head>
-  <body style="padding-top: 70px">
-    <div class="navbar navbar-default navbar-fixed-top">
+  <body>
+    <div class="navbar navbar-default navbar-static-top">
       <div class="container">
         <div class="navbar-header">
           <a href="#" class="navbar-brand">Team 04</a>
@@ -48,7 +38,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
           <div class="page-header">
               <a href="http://www.liveriot.net">
                 <h2 align="center">LiveRiot</h2>
@@ -59,23 +49,17 @@
       </div>
     </div>
 
-
     <div class="container">
 
         <div class="row">
-            <div class="col-md-1 col-lg-offset-1" style="height: 540px; padding-top: 20px">
-                <video id="liveRiotVideo" class="video-js vjs-default-skin" controls preload="none" width="900" height="500"
-                       poster="website/images/videoposter.png"
-                       data-setup="{}">
-                    <source src="videos/LiveRiot720.mp4" type='video/mp4' />
-                </video>
+            <div class="col-lg-8 col-lg-offset-2">
+              <iframe width="853" height="480" src="//www.youtube.com/embed/wzwfnwlitKU" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
 
-
-        <div class="row" style="height: 200px">
-            <div class="col-xs-6 col-sm-4 col-md-4">
-                <div class="thumbnail" style="height: 400px">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="thumbnail" style="height:400px">
                     <div class="caption">
                         <h3>Project Info</h3>
                         <p>Project Domain: Multimedia archive</p>
@@ -89,7 +73,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="thumbnail" style="height:400px">
                     <div class="caption">
                         <h3>Developer Team</h3>
@@ -110,7 +94,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-4">
+            <div class="col-lg-4 col-md-4 col-sm-4">
                 <div class="thumbnail" style="height:400px">
                     <div class="caption">
                         <h3>Clients</h3>
@@ -126,8 +110,8 @@
         </div>
 
         <footer>
-            <div class="row" style="padding-top: 320px">
-                <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="page-footer">
                         <ul class="list-unstyled">
                             <li><a href="https://github.com/zichuanwang/LiveRiotTeamWebsite/">GitHub</a></li>
